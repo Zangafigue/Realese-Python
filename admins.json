@@ -1,0 +1,16 @@
+{
+  "admins": [
+    {
+      "username": "admin",
+      "password": "admin123",
+      "nom": "Admin",
+      "prenom": "Principal"
+    },
+    {
+      "username": "THYM",
+      "password": "11223344",
+      "nom": "TRA",
+      "prenom": "Math"
+    }
+  ]
+}

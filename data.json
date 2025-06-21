@@ -1,0 +1,53 @@
+{
+  "suggestions": [
+    {
+      "category": "other",
+      "title": "Test",
+      "idee": "Code test",
+      "anonymous": "yes",
+      "nom": "",
+      "prenom": "",
+      "filiere": "",
+      "promotion": "",
+      "votes_up": 0,
+      "votes_down": 1,
+      "voted_admins": {
+        "THYM": "down"
+      }
+    },
+    {
+      "category": "other",
+      "title": "SDFGH",
+      "idee": "SEDFGHJKL",
+      "anonymous": "yes",
+      "nom": "",
+      "prenom": "",
+      "filiere": "",
+      "promotion": "",
+      "votes": 0,
+      "voted_admins": {
+        "TYHM": "up",
+        "THY": "down"
+      },
+      "votes_up": 1,
+      "votes_down": 1
+    },
+    {
+      "category": "other",
+      "title": "HAVE A GOOD RESTAURQTION",
+      "idee": "THE RESTAURATION IS NOT GOOD",
+      "anonymous": "yes",
+      "nom": "",
+      "prenom": "",
+      "filiere": "",
+      "promotion": "",
+      "votes": 0,
+      "voted_admins": {
+        "THY": "down",
+        "THYM": "up"
+      },
+      "votes_up": 1,
+      "votes_down": 1
+    }
+  ]
+}

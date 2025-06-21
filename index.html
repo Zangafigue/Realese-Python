@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="/static/js/script.js"></script>
+    <title>E-Suggestion-Box</title>
+</head>
+<body>
+    <header>
+        <h1>E-Suggestion-Box</h1>
+        <p>(Boîte à idées électronique)</p>
+    </header>
+    <!-- Home Section --> 
+    <section id="home">
+        <div id="home-first-view">
+            <h1>Welcome on your Students E-Suggestion-Box</h1>
+            <h2>( Bienvenue sur votre plateforme étudiante de boîte à idées )</h2>
+            <p>Throughtout this site, we aim to allow students to suggest freely their point of view on their university's management.</p>
+            <p>( à travers ce site, nous souhaitons permettre aux étudiants de suggérer librement leur point de vue sur la gestion de leur université. )</p>
+            <button id="next-btn">Next (suivant)</button>
+        </div>
+        <div id="home-second-view" style="display:none;">
+            <button id="back-btn" type="button" onclick="goBackFromHome()">← Retour</button>
+            <h1>Are you (êtes-vous) ?:</h1>
+            <button id="student-btn">A student (Un étudiant)</button>
+            <button id="admin-btn">An administrator (Membre de l'administration)</button>
+        </div>
+    </section>
+    <!-- User Submission Form Section -->
+    <section id="user-form" style="display:none;">
+        <button type="button" onclick="goBackFromUserForm()">← Retour</button>
+        <h2>Suggest your idea (proposez votre idee)</h2>
+        <p>Please fill the form below to submit your idea. (veuillez remplir le formulaire ci-dessous pour soumettre votre idée.)</p>
+        <form id="ideeform" action="#" onsubmit="return false;">
+            <label for="category">What is your suggestion based on (sur quoi porte votre idée)?</label>
+            <select id="category" required>
+                <option value="">Select a category (sélectionnez une categorie)</option>
+                <option value="dormitory">Dormitory (cité universitaire)</option>
+                <option value="Restauration">Restauration</option>
+                <option value="administration">Administration</option>
+                <option value="hygiene">Hygiene</option>
+                <option value="other">Other (autre)</option>
+            </select>
+            <br>
+            <input type="text" name="title" placeholder="Please enter your suggestion" required>
+            <br>
+            <label for="idee">Please describe your idea (veuillez décrire votre suggestion):</label>
+            <textarea name="idee" rows="4" placeholder="Explain more your idea here... (approfondissez votre idée ici...)" required></textarea>
+            <br>
+            <label>Do you want to submit anonymously? (Voulez-vous soumettre en anonyme ?)</label>
+            <select id="anonymous" name="anonymous">
+                <option value="yes">Yes (oui)</option>
+                <option value="no">No (non)</option>
+            </select>
+            <div id="student-info" style="display:none; margin-top:10px;">
+                <input type="text" name="nom" placeholder="Nom">
+                <input type="text" name="prenom" placeholder="Prénom">
+                <input type="text" name="filiere" placeholder="Filière">
+                <input type="text" name="promotion" placeholder="Promotion">
+            </div>
+            <button type="submit">Submit the suggestion</button>
+        </form>
+    </section>
+    <!-- Admin Login Section -->
+    <section id="admin-login" style="display:block;">
+        <button type="button" onclick="goBackFromAdminLogin()">← Retour</button>
+        <h2>Admin Login (connexion admin)</h2>
+        <label>Are you a new admin or already registered? (Êtes-vous un nouvel admin ou déjà enregistré ?)</label>
+        <select id="admin-type">
+            <option value="registered">Déjà enregistré</option>
+            <option value="new">Nouvel admin</option>
+        </select>
+        <div id="admin-registered-form">
+            <input type="text" id="admin-username" placeholder="Nom d'utilisateur">
+            <input type="password" id="adminpass" placeholder="Password (mot de passe)">
+            <br>
+            <button type="button">Login (connexion)</button>
+        </div>
+        <div id="admin-new-form" style="display:none;">
+            <input type="text" id="admin-name" placeholder="Nom">
+            <input type="text" id="admin-prenom" placeholder="Prénom">
+            <input type="text" id="admin-new-username" placeholder="Nom d'utilisateur">
+            <input type="password" id="admin-new-pass" placeholder="Nouveau mot de passe">
+            <br>
+            <button type="button">Register (S'enregistrer)</button>
+        </div>
+    </section>
+    <!-- Admin management section -->
+    <section id="admin-management" style="display:none;">
+        <button type="button" onclick="goBackFromAdminManagement()">← Retour</button>
+        <h2>Admin Management (gestion admin)</h2>
+        <p>Here you can manage suggestions and users.</p>
+        <button onclick="showAdminSection('suggestions')">View Suggestions (voir les suggestions)</button>
+        <button onclick="showAdminSection('ranking')">Classement des idées</button>
+        <button onclick="showAdminSection('logout')">Logout (déconnexion)</button>
+        
+
+        <div id="suggestions-section" style="display:none; margin-top:15px;">
+            <h3>Received suggestions</h3>
+            <h4>(Suggestions reçues)</h4>
+            <ul id="suggestions-list">
+                <!-- Les suggestions seront ajoutées ici dynamiquement par JS -->
+            </ul>
+        </div>
+        <div id="ranking-section" style="display:none; margin-top:15px;">
+            <h3>Classement des idées</h3>
+            <ul id="ranking-list">
+                <!-- suggestions have to be dynamicaly stored here -->
+            </ul>
+        </div>
+    </section>       
+    <!-- Footer Section -->
+    <footer>
+        <p> 2025 E-Suggestion-Box. </p>
+    </footer>
+</body>
+</html>
