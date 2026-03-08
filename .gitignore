@@ -1,0 +1,18 @@
+# Les environnements virtuels
+venv/
+env/
+.venv/
+.env
+
+# Les fichiers compilés Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Fichiers d'environnement (si vous utilisez des variables d'environnement secrètes)
+.env
+.flaskenv
+
+# Fichiers générés par l'OS
+.DS_Store
+Thumbs.db
